@@ -5,12 +5,14 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
 # **Kurulum**
 
 **1. Gereksinimlerin Kurulumu**
+-
 - Python 3.10 veya daha yeni bir sürümün yüklü olduğundan emin olun.
 - Projeyi çalıştırmak için aşağıdaki komutu kullanarak Flask ve diğer bağımlılıkları yükleyin:
 
       pip install -r requirements.txt
 
 **2. Veritabanı Yapılandırması**
+-----
 
 **Database Oluşturma:**
 
@@ -28,9 +30,12 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
         password TEXT
     );
 
+    
+
 - MySQL veritabanı kurulumunu tamamlayın ve gerekli bağlantı bilgilerini `config.py` dosyasında tanımlayın.
 
 **3. Uygulamanın Başlatması**
+-
 - Terminalde projenin ana dizinine gidin ve aşağıdaki komutu kullanarak Flask sunucusunu başlatın:
 
       flask run
