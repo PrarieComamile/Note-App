@@ -11,8 +11,24 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
       pip install -r requirements.txt
 
 **2. Veritabanı Yapılandırması**
-- MySQL veritabanı kurulumunu tamamlayın ve gerekli bağlantı bilgilerini `config.py` dosyasında tanımlayın.
 
+**Database Oluşturma:**
+
+    CREATE DATABASE noteapp;
+
+
+**Tablo Oluşturma:**
+
+    USE noteapp;
+    CREATE TABLE users (
+        id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        name TEXT,      
+        email TEXT,
+        username TEXT,
+        password TEXT
+    );
+
+- MySQL veritabanı kurulumunu tamamlayın ve gerekli bağlantı bilgilerini `config.py` dosyasında tanımlayın.
 
 **3. Uygulamanın Başlatması**
 - Terminalde projenin ana dizinine gidin ve aşağıdaki komutu kullanarak Flask sunucusunu başlatın:
