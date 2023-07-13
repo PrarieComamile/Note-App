@@ -4,6 +4,7 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from passlib.hash import sha256_crypt
 from validate_email import validate_email
 from functools import wraps
+from config import SECRET_KEY, DATABASE_HOST, DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD
 import datetime
 
 
@@ -35,13 +36,13 @@ class NoteForm(Form):
     content = TextAreaField("", validators= [validators.DataRequired()])
 
 app = Flask(__name__)
-app.secret_key = "enter_secret_key"
+app.secret_key = SECRET_KEY
 
 #Mysql Config
-app.config["MYSQL_HOST"] = "localhost"
-app.config["MYSQL_USER"] = "your_username"
-app.config["MYSQL_PASSWORD"] = "your_password"
-app.config["MYSQL_DB"] = "noteapp"
+app.config["MYSQL_HOST"] = DATABASE_HOST
+app.config["MYSQL_USER"] = DATABASE_USER
+app.config["MYSQL_PASSWORD"] = DATABASE_PASSWORD
+app.config["MYSQL_DB"] = DATABASE_NAME
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 
 mysql = MySQL(app)
