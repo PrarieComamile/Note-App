@@ -7,7 +7,7 @@ from functools import wraps
 import datetime
 
 
-#Kullanıcı giriş Decorator
+#User login Decorator
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
