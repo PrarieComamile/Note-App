@@ -24,7 +24,7 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
 
 
 
-# **Kullanılan Teknolojiler**
+# Kullanılan Teknolojiler
 
 - **Python**: Web uygulamasının arkasındaki programlama dili.
 
