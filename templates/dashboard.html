@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App | Dashboard</title>
+</head>
+<body>
+    {% include 'includes/sidebar.html' %}
+
+    <main class="kart main-content">
+        {% include 'includes/messages.html' %}
+
+        <br>
+        
+        <div style="display: flex; justify-content: space-between;">
+            <h2>Notes</h2>
+
+            <div style="display: flex; align-items: center;">
+                <a href="/createnote" class="btn btn-success" style="display: flex; align-items: center; padding-left: 7px;">
+                  <span class="material-symbols-outlined" style="margin-right: 3px;">add</span>
+                  <span>Create Note</span>
+                </a>
+            </div>
+
+        </div>
+
+        <hr>
+ 
+        {% if _donguIsEmpty %}
+            <div class="card mb-1 card-modify text-center" style="width: 47%; margin-left:auto; margin-right:auto; border:none;">
+                <div class="card-body">
+                    <h3 class="card-text">Note Not Found...</h3>
+                    <p class="card-text">You can create a note by pressing the button below!</p>
+                    <a href="/createnote" class="btn btn-primary">Create Note</a>
+                </div>
+            </div>
+                
+            {% else %}
+
+                {% for note in notes|reverse %}
+                    <a style="color: rgb(4, 4, 4);" href="/dashboard/notes/{{ note.id }}">
+                    <div class="card mb-3">
+
+                        <div class="card-header">
+                            <h5>{{ note.title }}</h5>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text" style="padding-bottom: 1%;">{{ note.content[0:150] }}</p>
+
+                            <div style="display: flex; justify-content: space-between;">
+                                <p class="card-text" style="margin: 0%; padding-top: 10%;"><small class="text-body-secondary">{{ created_time[loop.index-1] }}</small></p>
+                                <a href="/delete/{{ note.id }}" class="btn btn-danger dashboard-delete-btn" style="display: flex; align-items: center; padding: 2px;">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                {% endfor %}
+                
+            <hr>
+            <br>
+            <br>
+                    
+        {% endif %}
+
+    </main>
+
+</body>
+</html>

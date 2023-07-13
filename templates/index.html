@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Note App</title>
+</head>
+
+<body>
+    {% include 'includes/sidebar.html' %}
+
+    <main class="kart main-content">
+        {% include 'includes/messages.html' %}
+        
+        <div style="margin-left: 1%; margin-right: 1%;">
+        
+            <div class="card mb-3 card-modify text-center" style="border-radius: 0px; border:none; margin-top: 2%;">
+                <div class="card-body">
+                    <div class="message-card">
+                        <h3 class="card-text">Welcome To Note App, {{ session["name"].split(" ")[0] }}</h3>
+                        <p class="card-text">Take, edit and manage instant notes with the Notes App. Increase your productivity and securely sync your information with easy access from any device!</p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+        </div>
+
+        <h2>Recent Notes</h2>
+        <hr>
+
+        {% if _donguIsEmpty %}
+            <div class="card mb-1 card-modify text-center" style="width: 47%; margin-left:auto; margin-right:auto; border:none;">
+                    <div class="card-body">
+                        <h3 class="card-text">Note Not Found...</h3>
+                        <p class="card-text">You can create a note by pressing the button below!</p>
+                        <a href="/createnote" class="btn btn-primary">Create Note</a>
+                    </div>
+                </div>
+                
+            {% else %}
+            
+
+                {% for note in notes|reverse %}
+
+                    {% if loop.index <= 3 %}
+                        <a href="/dashboard/notes/{{ note.id }}">
+                            <div class="card mb-3">
+                            <div class="card-header">
+                                <h5>{{ note.title }}</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{ note.content[0:150] }}</p>
+                                <p class="card-text"><small class="text-body-secondary">{{ created_time[loop.index-1] }}</small></p>
+                            </div>
+                            </div>
+                        </a>
+                    {% endif %}
+
+                {% endfor %}
+                
+                <a href="/dashboard">See More...</a>
+
+            <hr>
+            <br>
+            <br>
+                    
+        {% endif %}
+
+    </main>
+</body>
+</html>
+
+

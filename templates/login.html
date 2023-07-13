@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Note App | Login</title>
+</head>
+<body>
+    
+    <style>
+        .container {
+            position: relative;
+            display: grid;
+            place-items: center;
+            height: 100vh; /* Sayfa yüksekliğine göre ayarlayabilirsiniz */
+        }
+        .card {
+            width: 40%;
+            background-color: rgb(224, 224, 224);
+        }
+        .card-form {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .flash-messages {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="flash-messages">
+            {% include 'includes/messages.html' %}
+        </div>
+
+        <div class="card">
+            {% from "includes/formhelpers.html" import render_field %}
+            <br>
+            
+            <form class="card-form" method=post>
+                {{ render_field(form.email, class="form-control") }}
+                {{ render_field(form.password, class="form-control") }}
+                <br>
+                <div style="display: flex; justify-content: space-between;">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <a href="/register">Create a new account?</a>
+                </div>
+            </form>
+
+            <br>
+        </div>
+    </div>
+</body>
+</html>

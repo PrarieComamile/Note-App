@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Note App | Register</title>
+</head>
+<body>
+
+    <style>
+        .container {
+            display: grid;
+            place-items: center;
+            height: 100vh; /* Sayfa yüksekliğine göre ayarlayabilirsiniz */
+        }
+        .card {
+            width: 40%;
+            background-color: rgb(224, 224, 224);
+        }
+        .card-form {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    </style>
+
+    <div class="container">
+        <div class="card">
+            {% from "includes/formhelpers.html" import render_field %}
+            <br>
+            
+            <form class="card-form" method=post>
+                {{ render_field(form.name, class="form-control") }}
+                {{ render_field(form.email, class="form-control") }}
+                {{ render_field(form.username, class="form-control") }}
+                {{ render_field(form.password, class="form-control") }}
+                {{ render_field(form.confirm, class="form-control") }}
+                <br>
+                <div style="display: flex; justify-content: space-between;">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <a href="/login">Sign in</a>
+                </div>
+            </form>
+
+            <br>
+        </div>
+    </div>
+</body>
+</html>
