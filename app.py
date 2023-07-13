@@ -41,7 +41,7 @@ app.secret_key = "enter_secret_key"
 app.config["MYSQL_HOST"] = "localhost"
 app.config["MYSQL_USER"] = "your_username"
 app.config["MYSQL_PASSWORD"] = "your_password"
-app.config["MYSQL_DB"] = "your_dbname"
+app.config["MYSQL_DB"] = "noteapp"
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 
 mysql = MySQL(app)
