@@ -36,9 +36,6 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
 
 - **Passlib**: Parola hashleme ve doğrulama için kullanılan bir kütüphane.
 
-# Lisans 
-  Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICENSE](https://github.com/PrarieComamile/Note-App/blob/main/LICENSE) dosyasını inceleyebilirsiniz.
-
 
 # Site Görüntüleri
 
@@ -47,6 +44,8 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
 ![Screenshot from 2023-07-13 16-07-47](https://github.com/PrarieComamile/Note-App/assets/101043132/4eaf639c-c743-42f8-8c81-ac543ae2f9e0)
 
 
+# Lisans 
+  Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICENSE](https://github.com/PrarieComamile/Note-App/blob/main/LICENSE) dosyasını inceleyebilirsiniz.
 
 
 
