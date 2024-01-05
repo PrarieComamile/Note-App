@@ -1,25 +1,36 @@
 # Note-App
 
-Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organize edebilecekleri bir web uygulamasıdır.
+Note App is a web application where users can easily save and organize their notes.
 
-# **Kurulum**
+# **Installation**
 
-**1. Gereksinimlerin Kurulumu**
--
-- Python 3.10 veya daha yeni bir sürümün yüklü olduğundan emin olun.
-- Projeyi çalıştırmak için aşağıdaki komutu kullanarak Flask ve diğer bağımlılıkları yükleyin:
+**1. Installation of Requirements**
+
+
+- Ensure that Python 3.10 or a newer version is installed.
+
+- To run the project, install Flask and other dependencies using the following command:
 
       pip install -r requirements.txt
 
-**2. Veritabanı Yapılandırması**
+**2. Configuration of the Database**
 -----
 
-**Database Oluşturma:**
+- **Creating the Database:**
+
+Create a database named 'noteapp':
 
     CREATE DATABASE noteapp;
 
 
-**Tablo Oluşturma:**
+
+
+    
+
+
+- **Creating Tables:**
+
+ Use the 'noteapp' database and create a table named 'users':
 
     USE noteapp;
     CREATE TABLE users (
@@ -32,33 +43,33 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
 
     
 
-- MySQL veritabanı kurulumunu tamamlayın ve gerekli bağlantı bilgilerini `config.py` dosyasında tanımlayın.
+- Complete the installation of the MySQL database and define the necessary connection information in the 'config.py' file.
 
-**3. Uygulamanın Başlatması**
+**3. Starting the Application**
 -
-- Terminalde projenin ana dizinine gidin ve aşağıdaki komutu kullanarak Flask sunucusunu başlatın:
+- Navigate to the root directory of the project in the terminal and start the Flask server using the following command:
 
       flask run
 
-- Tarayıcınızda `http://localhost:5000` adresine giderek uygulamayı görüntüleyebilirsiniz.
+- You can view the application by going to http://localhost:5000 in your browser.
 
 
 
 
-# Kullanılan Teknolojiler
+# Technologies Used
 
-- **Python**: Web uygulamasının arkasındaki programlama dili.
+- **Python**: The programming language behind the web application.
 
-- **Flask**: Python tabanlı bir web framework'ü. Web uygulaması çatısı ve veritabanı yönetimi için kullanılmıştır.
+- **Flask**: A Python-based web framework used for the web application structure and database management.
 
-- **Flask-MySQLdb**: Flask ile MySQL veritabanı arasındaki bağlantıyı sağlayan bir eklenti.
+- **Flask-MySQLdb**: An extension that enables the connection between Flask and MySQL database.
 
-- **WTForms**: Formları oluşturmak ve doğrulamak için kullanılan bir kütüphane.
+- **WTForms**: A library used to create and validate forms.
 
-- **Passlib**: Parola hashleme ve doğrulama için kullanılan bir kütüphane.
+- **Passlib**: A library used for password hashing and authentication.
 
 
-# Site Görüntüleri
+# Site Images
 
 ![Screenshot from 2023-07-13 16-07-15](https://github.com/PrarieComamile/Note-App/assets/101043132/e1b636b2-cb73-47e0-888e-9b785bd2f3f3)
 ![Screenshot from 2023-07-13 16-07-24](https://github.com/PrarieComamile/Note-App/assets/101043132/bdaca5f8-6065-449b-997e-5c94be44abd0)
@@ -66,7 +77,7 @@ Note App, kullanıcıların notlarını kolaylıkla kaydedebilecekleri ve organi
 
 
 # Lisans 
-  Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICENSE](https://github.com/PrarieComamile/Note-App/blob/main/LICENSE) dosyasını inceleyebilirsiniz.
+  The section with the screenshots is referred to in the original text but isn't provided [here](https://github.com/PrarieComamile/Note-App/blob/main/LICENSE).
 
 
 
